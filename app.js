@@ -34,7 +34,6 @@ const getImages = (query) => {
     loadSpinner(true);
     fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
         .then(response => response.json())
-        // .then(data => console.log(data.hits))
         .then(data => showImages(data.hits))
         .catch(err => console.log(err))
 }
@@ -51,7 +50,6 @@ const selectItem = (event, img) => {
     } else {
         sliders.pop(img);
         element.classList.remove('added');
-        // alert('Hey, Already added !')
     }
 }
 var timer
@@ -157,7 +155,5 @@ const loadSpinner = (show) => {
     else {
         spinner.classList.add('d-none');
     }
-    
-    console.log(spinner.classList)
 }
 
