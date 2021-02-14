@@ -89,7 +89,7 @@ const createSlider = () => {
         }, duration);
     }
     else {
-        alert('Negative Number can not accept. So i count 1 Second');
+        alert('Negative Number can not accept. So I set default 1 Second');
         timer = setInterval(function () {
             slideIndex++;
             changeSlide(slideIndex);
